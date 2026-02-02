@@ -1,0 +1,63 @@
+body {/*フォントの指定*/
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+.section{
+    padding: 100px 0; /*上下に余白*/
+    background-color: #e3f6f5;
+}
+.container{
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto; /*中央寄せ(余白を左右両端に均等に挿入)*/
+}
+.row{
+    display: flex; /*要素の横並び*/
+    justify-content: space-between; /*	flex要素を両端揃えにする*/
+    max-width: 900px;
+    margin: 0 auto 24px; /*中央寄せ かつ 下余白調整*/
+    background-color: #ffffff; /*背景色指定*/
+    padding: 30px 60px; /*上下左右へ余白*/
+    border: solid 3px #000000; /*枠線*/
+}
+.col:first-child{/*一つ目の要素へ*/
+    width: 20%;
+}
+.col:last-child{/*最後の要素へ*/
+    width: 70%;
+}
+h3{ /*見出しへ*/
+    font-size: 24px; /*文字の大きさ*/
+    font-weight: 700; /*文字の太さ*/
+    color: #3f88c9;
+    margin-bottom: 18px; /*下の余白*/
+}
+.text{
+    line-height: 1.6; /*行間の調整*/
+}
+
+@media screen and (max-width: 767px){
+    .row{
+        flex-wrap: wrap; /*縦並びに変更*/
+        gap:24px 0; /*要素間の縦の余白*/
+        padding: 30px 24px; /*上下左右の余白*/
+    }
+    .col:first-child{/*一つ目の要素へ*/
+        width: 100%;
+        text-align: center; /*画像の中央寄せ*/
+    }
+    .col:last-child{/*最後の要素へ*/
+        width: 100%;
+    }
+    img{
+        max-width: 130px; /*画像最大サイズを小さく調整*/
+    }
+    h3{
+        font-size: 20px; /*見出しのサイズ、位置調整*/
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .text{ /*テキストのサイズ調整*/
+        font-size: 15px;
+    }
+}
