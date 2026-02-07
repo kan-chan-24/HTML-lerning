@@ -1,0 +1,296 @@
+body{
+    /*ページ全体のフォント・文字色・背景色*/
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: #ffffff;
+    background-color: #16161a;
+}
+/*▽ヘッダーstyle▽*/
+header{
+    /*ヘッダーを画面上部に固定*/
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    background-color: #16161a;
+    z-index: 3;
+}
+header .container{
+    max-width: 1080px; /*containerクラスの最大横幅*/
+    width: 90%;
+    margin: 0 auto; /* 上 | 左右 の余白*/
+}
+header .row{
+    /*ヘッダー項目を横並び　左右均等　上下中央寄せ*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+header .logo{
+    font-size: 24px;
+}
+header ul{
+    display: flex; /*リストの要素を横並び*/
+}
+header ul li{
+    margin-left: 30px; /*要素の左側に余白*/
+    font-size: 14px;
+    letter-spacing: 1px; /*文字間*/
+}
+/*▽トップページ style▽*/
+.section01{
+    background-image: url(../img/img01.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    height: 100vh; /*vh = 縦の画面幅いっぱい*/
+    display: flex; /*下部のalign-itemsを適用させる為に記述*/
+    align-items: center; /*margin内の中央に配置*/
+}
+.section01 .filter{
+    /*section01の画像全体に半透明の黒を重ねる*/
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+    position: absolute;
+    top:60px;
+    left:0;
+    z-index:1;
+}
+.section01 .container{
+    /*トップページのテキスト位置の指定*/
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2; /*z-indexはpositionの指定がある時適用される*/
+    position: relative; /*スタンダードなposition設定*/
+}
+ /*.heading h1 .textは全て表示テキストの設定*/
+.section01 .heading{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #2cb67d;
+}
+.section01 h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.section01 .text{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.section01 a{
+    /*contactボタン*/
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    
+    /*枠の描画*/
+    display: inline-block; /*文字列分の要素幅を取得*/
+    background-color: #7f5af0;
+    border-radius: 6px;
+    padding: 16px 40px 20px;
+    
+    /*マウスカーソルが重なった時の色変化の時間指定*/
+    transition-duration: .2s;
+}
+.section01 a:hover{
+    /*マウスカーソルが重なった時に変化する色*/
+    background-color: #2cb67d;
+
+}
+/*▽サービス内容 style▽*/
+.section02{
+    margin-bottom: 45px;
+}
+.section02 .container{
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+.section02 .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;/*横に収まりきらなければ縦になる*/
+    transform: translateY(-48px); /*rowの要素を縦に少し上げる*/
+    z-index: 2;
+    position: relative;
+}
+.section02 .col{
+    background-color: #ffffff;
+    width: 32%;
+    color: #16161a;
+    padding: 20px;
+}
+.section02 img{
+    background-color: #7f5af0;
+    width: 60px;
+    padding: 10px;
+    border-radius: 9px;
+    margin-bottom: 16px;
+}
+.section02 h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.section02 hr{
+    border: solid 2px #2cb67d;
+    margin-bottom: 16px;
+    width: 48px;
+}
+.section02 .text{
+    font-size: 15px;
+    line-height: 1.5;
+}
+/*▽事業方針 style▽*/
+.section03{
+    padding-top: 45px;
+    margin-bottom: 60px;
+}
+.section03 .container{
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+.section03 .row{
+    /*要素の横並び*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.section03 .col{
+    width: 46%;
+}
+.section03 h2{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.3;
+}
+.section03 hr{
+    border: solid 2px #2cb67d;
+    margin-bottom: 20px;
+    width: 60px;
+}
+.section03 .text{
+    line-height: 1.5;
+}
+/*▽NEWS style▽*/
+.section04{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.section04 .container{
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+.section04 h2{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section04 hr{
+    border: solid 2px #2cb67d;
+    margin: 0 auto 40px;
+    width: 60px;
+}
+.section04 ul{
+    max-width: 700;
+    margin: 0 auto;
+}
+.section04 li{
+    border: solid 1px #ffffff;
+    margin-bottom: 20px;
+    padding: 16px 24px;
+}
+.section04 .date{
+    color: #7f5af0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+/*▽お問い合わせ style▽*/
+.section05{
+    padding: 60px;
+    margin-bottom: 130px;
+}
+.section05 .container{
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+.section05 h2{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section05 hr{
+    border: solid 2px #2cb67d;
+    margin: 0 auto 40px;
+    width: 60px;
+}
+.section05 form{
+    max-width: 540px;
+    margin: 0 auto;
+}
+.section05 label{
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+.section05 input, .section05 textarea{
+    background-color: #ffffff;
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 30px;
+    color: #16161a;
+}
+.section05 input[type=submit]{
+    text-align: center;
+    background-color: #7f5af0;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 20px 16px 22px;
+    letter-spacing: 6px;
+    border-radius: 6px;
+    transition-duration: .2s;
+}
+.section05 input[type=submit]:hover{
+    background-color: #2cb67d;
+}
+/*フッター style*/
+footer{
+    background-color: #ffffff;
+    text-align: center;
+    color: #16161a;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding:20px 0;
+}
+/*スマホ対応*/
+@media screen and (max-width:767px){
+    .section01 .container{
+        width: 98%;
+    }
+    .section01 h1{
+        font-size: 27px;
+    }
+    .section02 .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .section03 .col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
